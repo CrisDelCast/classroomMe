@@ -14,7 +14,6 @@ import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -33,7 +32,7 @@ import model.ClassRoom;
 
 public class ClassRoomGUI {
 		
-	  int contImage;
+	
 		
 
 	  @FXML
@@ -77,8 +76,7 @@ public class ClassRoomGUI {
      @FXML
      private DatePicker dateSelect;
 
-     @FXML
-     private ComboBox<String> comboBrowsers;
+
      
      @FXML
      private ClassRoom classRoom;
@@ -104,8 +102,7 @@ public class ClassRoomGUI {
      @FXML
      private TableColumn<Acount, String> colBirthday;
 
-     @FXML
-     private TableColumn<Acount, String> colBrowser;
+   
      
      public void setInfoTableView() {
     	 
@@ -116,7 +113,7 @@ public class ClassRoomGUI {
      	colGender.setCellValueFactory(new PropertyValueFactory<Acount, String>("gender"));
      	colCarrer.setCellValueFactory(new PropertyValueFactory<Acount, String>("career"));
      	colBirthday.setCellValueFactory(new PropertyValueFactory<Acount, String>("birthday"));
-     	colBrowser.setCellValueFactory(new PropertyValueFactory<Acount, String>("favoriteBrowser"));
+     
      }
 
      @FXML
@@ -126,24 +123,25 @@ public class ClassRoomGUI {
     	 int genderInd = checkGen();
     	 String selectCarrer = selectCarrer();
     	 String date = String.valueOf(dateSelect.getValue());
-    	 int browserInd = comboBrowsers.getSelectionModel()	.getSelectedIndex();
+    	
     	 
-    	 if (!userName.equals("")&&!password.equals("") && genderInd != -1 && !selectCarrer.equals("")&&!date.equals("")&& browserInd != -1) {
-    		 txtUserName.setText("");
-    		 txtPassword.setText("");
-    		 oMale.setSelected(false);
-     		 oFemale.setSelected(false);
-     		 oOther.setSelected(false);
-     		 checkIndustrial.setSelected(false);
-     		 checkSoftware.setSelected(false);
-     		 checkTelematic.setSelected(false);
-     		 dateSelect.getEditor().clear();
-     		comboBrowsers.getSelectionModel().select(-1);;
+    	 if (!userName.equals("")&&!password.equals("") && genderInd != -1 && !selectCarrer.equals("")&&!date.equals("")) {
+    		 
+     		
 
     	 
-    	 classRoom.addUsr(userName, password,browserInd,genderInd, selectCarrer, date);
+    	 classRoom.addUsr(userName, password,genderInd, selectCarrer, date);
+    	 txtUserName.setText("");
+		 txtPassword.setText("");
+		 oMale.setSelected(false);
+ 		 oFemale.setSelected(false);
+ 		 oOther.setSelected(false);
+ 		 checkIndustrial.setSelected(false);
+ 		 checkSoftware.setSelected(false);
+ 		 checkTelematic.setSelected(false);
+ 		 dateSelect.getEditor().clear();
  	
-		contImage++;
+		
  		
  		Alert alert = new Alert(AlertType.INFORMATION);
  		alert.setTitle("Create account");
@@ -158,7 +156,7 @@ public class ClassRoomGUI {
  		alert.setContentText("There are unfilled fields");
  		alert.showAndWait();
  		}
- 	}
+ 	 }
      @FXML
      void browseRute(ActionEvent event) {
     	 try {
@@ -174,10 +172,7 @@ public class ClassRoomGUI {
 
      }
 
-     @FXML
-     void comboBrowser(ActionEvent event) {
-
-     }
+ 
 
      
      @FXML
@@ -289,9 +284,9 @@ public class ClassRoomGUI {
                 	
             	} else if(i == classRoom.getUsrs().size() - 1){
             		Alert alert = new Alert(AlertType.WARNING);
-            		alert.setTitle("Log In Incorrect");
+            		alert.setTitle("LogIn Incorrect");
             		alert.setHeaderText(null);
-            		alert.setContentText("The username and password given are incorrect");
+            		alert.setContentText("The username and password are incorrect");
             		alert.showAndWait();
             	}
     		} 	
@@ -301,11 +296,12 @@ public class ClassRoomGUI {
     		Alert alert = new Alert(AlertType.INFORMATION);
     		alert.setTitle("No accounts");
     		alert.setHeaderText(null);
-    		alert.setContentText("There are no accounts created yet");
+    		alert.setContentText("no accounts created yet");
     		alert.showAndWait();
     		
     	}
-    }
+   }
+   
     
     
     @FXML
@@ -317,6 +313,9 @@ public class ClassRoomGUI {
     	
     	mainPane.getChildren().clear();
     	mainPane.getChildren().setAll(root);
+    	
+    	
+    	
 
     }
   

@@ -11,8 +11,8 @@ private List<Acount> usrs;
 		usrs = new ArrayList<Acount>();
 	}
 	
-	public void addUsr(String userName,String password, int gender, int brow,String carrer, String birthday) {
-		usrs.add(new Acount(userName,password,gender,brow,carrer,birthday));
+	public void addUsr(String userName,String password, int gender,String carrer, String birthday) {
+		usrs.add(new Acount(userName,password,gender,carrer,birthday));
 	}
 	public List<Acount>getUsrs(){
 		return usrs;

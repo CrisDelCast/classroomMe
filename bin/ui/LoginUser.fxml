@@ -15,11 +15,10 @@
       <ImageView fx:id="imageProfile" fitHeight="73.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
       <TableView fx:id="tbtUsers" prefHeight="271.0" prefWidth="600.0">
         <columns>
-          <TableColumn fx:id="colUserName" prefWidth="138.0" text="UserName" />
-          <TableColumn fx:id="colGender" prefWidth="127.0" text="Gender" />
-            <TableColumn fx:id="colCarrer" prefWidth="114.0" text="Carrer" />
-            <TableColumn fx:id="colBirthday" prefWidth="108.0" text="Birthday" />
-            <TableColumn fx:id="colBrowser" prefWidth="112.0" text="Browser" />
+          <TableColumn fx:id="colUserName" prefWidth="149.0" text="UserName" />
+          <TableColumn fx:id="colGender" prefWidth="145.0" text="Gender" />
+            <TableColumn fx:id="colCarrer" prefWidth="152.0" text="Carrer" />
+            <TableColumn fx:id="colBirthday" prefWidth="151.0" text="Birthday" />
         </columns>
       </TableView>
    </children>

@@ -6,16 +6,15 @@ public class Acount {
 	private int gender;
 	private String carrer;
 	private String birthday;
-	private int brow;
+
 
 	
 	
 	
-	public Acount(String userName,String password, int gender, int brow,String carrer, String birthday) {
+	public Acount(String userName,String password, int gender,String carrer, String birthday) {
 		this.setUserName(userName);
 		this.setPassword(password);
 		this.setGender(gender);
-		this.setbrow(brow);
 		this.setCarrer(carrer);
 		this.setBirthday(birthday);
 		}
@@ -58,20 +57,6 @@ public class Acount {
 
 	public void setGender(int gender) {
 		this.gender = gender;
-	}
-
-
-
-
-	public int getbrow() {
-		return brow;
-	}
-
-
-
-
-	public void setbrow(int brow) {
-		this.brow = brow;
 	}
 
 
