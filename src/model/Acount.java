@@ -3,19 +3,19 @@ package model;
 public class Acount {
 	private String userName;
 	private String password;
-	private String gender;
-	private String file;
+	private int gender;
 	private String carrer;
 	private String birthday;
+	private int brow;
 
 	
 	
 	
-	public Acount(String userName,String password, String gender, String file,String carrer, String birthday) {
+	public Acount(String userName,String password, int gender, int brow,String carrer, String birthday) {
 		this.setUserName(userName);
 		this.setPassword(password);
 		this.setGender(gender);
-		this.setFile(file);
+		this.setbrow(brow);
 		this.setCarrer(carrer);
 		this.setBirthday(birthday);
 		}
@@ -49,29 +49,29 @@ public class Acount {
 
 
 
-	public String getGender() {
+	public int getGender() {
 		return gender;
 	}
 
 
 
 
-	public void setGender(String gender) {
+	public void setGender(int gender) {
 		this.gender = gender;
 	}
 
 
 
 
-	public String getFile() {
-		return file;
+	public int getbrow() {
+		return brow;
 	}
 
 
 
 
-	public void setFile(String file) {
-		this.file = file;
+	public void setbrow(int brow) {
+		this.brow = brow;
 	}
 
 

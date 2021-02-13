@@ -2,9 +2,10 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -23,17 +24,16 @@
     <RowConstraints maxHeight="59.0" minHeight="7.0" prefHeight="59.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label prefHeight="17.0" prefWidth="184.0" text="Label" translateY="-12.0" GridPane.columnIndex="1" />
-      <Label prefHeight="28.0" prefWidth="236.0" text="Label" translateY="10.0" GridPane.columnIndex="1" />
-      <Label text="Label" translateX="150.0" translateY="-80.0" GridPane.rowIndex="1" />
-      <Label text="Label" translateX="150.0" translateY="-110.0" GridPane.rowIndex="1" />
-      <Label text="Label" translateX="150.0" translateY="-50.0" GridPane.rowIndex="1" />
-      <Label text="Label" translateX="150.0" translateY="-20.0" GridPane.rowIndex="1" />
-      <Label text="Label" translateX="150.0" translateY="5.0" GridPane.rowIndex="1" />
-      <Label text="Label" translateX="150.0" translateY="90.0" GridPane.rowIndex="1" />
-      <Label text="Label" translateX="150.0" translateY="120.0" GridPane.rowIndex="1" />
+      <Label prefHeight="17.0" prefWidth="184.0" text="join to ClassRoom" translateY="-12.0" GridPane.columnIndex="1" />
+      <Label prefHeight="28.0" prefWidth="236.0" text="Create you Acount" translateY="10.0" GridPane.columnIndex="1" />
+      <Label text="password" translateX="130.0" translateY="-80.0" GridPane.rowIndex="1" />
+      <Label prefHeight="17.0" prefWidth="63.0" text="userName" translateX="130.0" translateY="-110.0" GridPane.rowIndex="1" />
+      <Label text="Select rute " translateX="130.0" translateY="-50.0" GridPane.rowIndex="1" />
+      <Label text="gender" translateX="150.0" translateY="-20.0" GridPane.rowIndex="1" />
+      <Label text="carrer" translateX="150.0" translateY="5.0" GridPane.rowIndex="1" />
+      <Label text="date " translateX="150.0" translateY="90.0" GridPane.rowIndex="1" />
+      <Label text="browser " translateX="150.0" translateY="120.0" GridPane.rowIndex="1" />
       <TextField fx:id="txtUserName" prefHeight="8.0" prefWidth="203.0" translateY="-110.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <TextField fx:id="txtPassword" translateY="-80.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <TextField fx:id="txtLoadImage" translateY="-50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <RadioButton fx:id="oMale" mnemonicParsing="false" text="Male" translateY="-20.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <RadioButton fx:id="oFemale" mnemonicParsing="false" prefHeight="17.0" prefWidth="68.0" text="Female" translateX="60.0" translateY="-20.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -42,8 +42,10 @@
       <CheckBox fx:id="checkTelematic" layoutX="203.0" layoutY="199.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="134.0" text="Telematic engennier" translateY="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <CheckBox fx:id="checkIndustrial" layoutX="203.0" layoutY="199.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="134.0" text="industrial engennier" translateY="55.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <DatePicker fx:id="dateSelect" translateY="90.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <ChoiceBox fx:id="choiceBox" prefWidth="150.0" translateY="120.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ComboBox onAction="#comboBrowser" prefWidth="150.0" promptText="select one" translateY="120.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Button mnemonicParsing="false" onAction="#Login1" text="Log in" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Button mnemonicParsing="false" onAction="#CreateAcount1" text="create acount" translateX="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <PasswordField fx:id="txtPassword" translateY="-80.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#browseRute" text="Browser" translateY="-50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
    </children>
 </GridPane>
